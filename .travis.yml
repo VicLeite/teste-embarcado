@@ -33,6 +33,13 @@ cache:
     directories:
         - "~/.platformio"
 
+env:
+    - PLATFORMIO_AUTH_TOKEN=38e1b8ccdec3ea9d2feb65989d894f021512b1eb
+
+install:
+    - pip install -U platformio
+    - platformio update
+
 install:
     - pip install -U https://github.com/platformio/platformio/archive/develop.zip
 
