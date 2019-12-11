@@ -42,13 +42,13 @@ install:
 script:
     - platformio run
     - echo "Run desktop (native) tests on Travis.CI Linux machine"
-    - platformio test -e native
+    - pio remote test
 
-    - echo "List remote devices"
-    - platformio remote device list
+    # - echo "List remote devices"
+    # - platformio remote device list
 
-    - echo "Run embedded test on remote devices (nucleo_f401re)"
-    - platformio remote test -e nucleo_f401re
+    # - echo "Run embedded test on remote devices (nucleo_f401re)"
+    # - platformio remote test -e nucleo_f401re
 
 
 #
