@@ -69,7 +69,6 @@
 
 language: python
 python:
-    - "2.7"
     - "3.6" 
 
 sudo: false
@@ -86,8 +85,7 @@ install:
 
 script:
     - platformio run
-    # - echo "Run desktop (native) tests on Travis.CI Linux machine"
-    # - pio remote test
+    - platformio test -e native
 
     - echo "List remote devices"
     - platformio remote device list
