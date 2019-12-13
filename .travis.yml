@@ -24,31 +24,21 @@
 # Template #1: General project. Test it using existing `platformio.ini`.
 #
 
-language: python
-python:
-    - "2.7"
-
-sudo: false
-cache:
-    directories:
-        - "~/.platformio"
-
-env:
-    - PLATFORMIO_AUTH_TOKEN=38e1b8ccdec3ea9d2feb65989d894f021512b1eb
-
-install:
-    - pip install -U https://github.com/platformio/platformio/archive/develop.zip
-
-script:
-    - platformio run
-    - echo "Run desktop (native) tests on Travis.CI Linux machine"
-    - pio remote test
-
-    # - echo "List remote devices"
-    # - platformio remote device list
-
-    # - echo "Run embedded test on remote devices (nucleo_f401re)"
-    # - platformio remote test -e nucleo_f401re
+# language: python
+# python:
+#     - "2.7"
+#
+# sudo: false
+# cache:
+#     directories:
+#         - "~/.platformio"
+#
+# install:
+#     - pip install -U platformio
+#     - platformio update
+#
+# script:
+#     - platformio run
 
 
 #
@@ -75,3 +65,32 @@ script:
 #
 # script:
 #     - platformio ci --lib="." --board=ID_1 --board=ID_2 --board=ID_N
+
+
+language: python
+python:
+    - "2.7"
+
+sudo: false
+cache:
+    directories:
+        - "~/.platformio"
+
+env:
+    - PLATFORMIO_AUTH_TOKEN=38e1b8ccdec3ea9d2feb65989d894f021512b1eb
+
+install:
+    - pip install -U platformio
+    - platformio update
+
+script:
+    - platformio run
+    # - echo "Run desktop (native) tests on Travis.CI Linux machine"
+    # - pio remote test
+
+    # - echo "List remote devices"
+    # - platformio remote device list
+
+    # - echo "Run embedded test on remote devices (nucleo_f401re)"
+    # - platformio remote test -e nucleo_f401re
+
