@@ -1,13 +1,13 @@
 #include <mbed.h>
 #include <unity.h>
 
-DigitalOut led(LED1);
+DigitalOut led(LED2);
 
 uint8_t i = 0;
 uint8_t max_blinks = 5;
 
 void test_led_builtin_pin_number(void) {
-    TEST_ASSERT_EQUAL(PB_0,LED1);
+    TEST_ASSERT_EQUAL(PA_5,LED2);
 }
 
 void test_led_state_high(void) {

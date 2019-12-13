@@ -1,6 +1,6 @@
 #include <mbed.h>
 
-DigitalOut led(LED1);
+DigitalOut led(LED2);
 
 int main() {
 
